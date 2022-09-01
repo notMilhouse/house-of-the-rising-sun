@@ -9,12 +9,21 @@ class Circle
             centerY,
             color[3],
             raio;
+        
         int 
             nDots;
+        
+        void 
+            sDraw(),
+            tDraw();
+        
+        bool
+            triagle;
 
     public:
         Circle(double posx, double posy, double r);
-        void setColor(double r, double g, double b);
-        void setNDots(int n);
-        void Draw();
+        void 
+            setColor(double r, double g, double b),
+            setNDots(int n),
+            Draw();
 };
