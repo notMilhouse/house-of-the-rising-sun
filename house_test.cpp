@@ -5,6 +5,7 @@
 #include "house.cpp"
 
 void setup();
+void display();
 
 int main(int argc, char** argv){
     glutInit(&argc, argv);
@@ -12,15 +13,21 @@ int main(int argc, char** argv){
     glutInitWindowSize(1000,1000);
     glutInitWindowPosition(10, 10);
     glutCreateWindow("Casinha");
+    glutDisplayFunc(display);
 
-    House house;
-    
+    House house = House(300,300);
+
     setup();
     house.draw();
 
     glutMainLoop();
 
     return 0;
+}
+
+void display(void)
+{
+  /* ... */
 }
 
 void setup() {
