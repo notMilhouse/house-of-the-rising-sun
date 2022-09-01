@@ -1,12 +1,30 @@
-#include "solzinho.hpp"
+#include "circle.hpp"
 
-void DrawSun()
+Circle::Circle(double posx, double posy, double r)
+{
+    double color[] = {0.0, 0.0, 0.0};
+    centerX = posx;
+    centerY = posy;
+    raio = r;
+    nDots = 100;
+}
+
+void Circle::setColor(double r, double g, double b)
+{
+    color[0] = r;
+    color[1] = g;
+    color[2] = b;
+}
+
+void Circle::setNDots(int n)
+{
+    nDots = n;
+}
+
+void Circle::Draw()
 {
     int nDots;
     double
-        centerX = 300.0,
-        centerY = 300.0,
-        raio = 200.0,
         PI = 3.14,
         x = 0,
         y = 0,
@@ -17,7 +35,7 @@ void DrawSun()
 
     glViewport(0, 0, 500, 500);
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1, 1, 0);
+    glColor3f(color[0], color[1], color[2]);
 
     glBegin(GL_POLYGON);
 
