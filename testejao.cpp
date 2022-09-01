@@ -21,7 +21,8 @@ void Inicializar(void) {
 void Draw()
 {
     Circle sol = Circle(300.0, 300.0, 100.0);
-    sol.setColor(1.0, 1.0, 0);
+    sol.setColor(1.0, 0.5, 0);
+
     sol.Draw();
 }
 
